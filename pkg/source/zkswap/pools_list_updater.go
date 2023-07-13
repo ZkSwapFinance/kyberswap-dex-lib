@@ -117,7 +117,7 @@ func (d *PoolListUpdater) GetNewPools(ctx context.Context, metadataBytes []byte)
 func (d *PoolListUpdater) processBatch(ctx context.Context, poolAddresses []common.Address) ([]entity.Pool, error) {
 	var (
 		limit        = len(poolAddresses)
-		poolMetadata = make([]ZkSwapSwitchMetadata, limit)
+		poolMetadata = make([]ZkSwapMetadata, limit)
 		pools        = make([]entity.Pool, 0, limit)
 	)
 
